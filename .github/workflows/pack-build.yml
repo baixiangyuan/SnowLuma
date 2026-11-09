@@ -81,7 +81,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --registry=https://registry.npmjs.org/
 
       # Runs `tsc --noEmit` (or `tsc -b`) in every workspace package that
       # exposes a `typecheck` script. Platform-independent, so a single
@@ -124,7 +124,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --registry=https://registry.npmjs.org/
 
       - name: Run native smoke tests
         run: pnpm test:native
