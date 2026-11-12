@@ -202,6 +202,7 @@ jobs:
   # keeps the dispatch under our PAT.
   dispatch-docker:
     needs: release
+    if: vars.DOCKER_RELEASE_REPOSITORY != ''
     runs-on: ubuntu-latest
     environment: SnowLuma
     steps:
